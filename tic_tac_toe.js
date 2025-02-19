@@ -1,6 +1,11 @@
 let boxes = document.querySelectorAll(".box")
 let playerxscore = document.querySelector(".xscore")
 let playeroscore = document.querySelector(".oscore")
+let sx= document.querySelector("#sx")
+let px = document.querySelector("#px")
+let so= document.querySelector("#so")
+let po = document.querySelector("#po")
+
 
 let playerx = 0
 let playero = 0
@@ -24,11 +29,22 @@ boxes.forEach((box)=>{
             box.innerText = "X"
             box.id = "x"
             turnX = !turnX
+            document.body.style.background='linear-gradient(to right, rgba(224, 37, 37, 1), rgba(0, 0, 0, 0))'
+            sx.style.color = "black"
+            px.style.color = "black"
+            so.style.color = "blue"
+            po.style.color = "blue"
+
         }
         else{
             box.innerText = "O"
             box.id = "o"
             turnX = !turnX
+            document.body.style.background='linear-gradient(to left, rgba(0, 0, 255, 1), rgba(0, 0, 0, 0))'
+            so.style.color = "black"
+            po.style.color = "black"
+            sx.style.color = "red"
+            px.style.color = "red"
         }
         box.disabled = true
         checkwinner()
@@ -78,6 +94,12 @@ let newgamefn = ()=>{
         box.innerText = ""
         box.disabled = false
     })
+    document.body.style.background="rgb(238, 233, 233)"
+    so.style.color = "blue"
+    po.style.color = "blue"
+    sx.style.color = "red"
+    px.style.color = "red"
+
 }
 
 let newgame = document.querySelector(".new")
@@ -91,6 +113,11 @@ let resetfn = ()=>{
     })
     playerxscore.innerText = "0"
     playeroscore.innerText = "0"
+    document.body.style.background="rgb(238, 233, 233)"
+    so.style.color = "blue"
+    po.style.color = "blue"
+    sx.style.color = "red"
+    px.style.color = "red"
 }
 
 let reset = document.querySelector(".reset")

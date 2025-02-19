@@ -1,5 +1,6 @@
-html{
-    background-color: #000000;
+body{
+    background:  rgb(238, 233, 233);
+    opacity: 0.8;
 }
 
 .content{
@@ -11,7 +12,7 @@ html{
 .main{
     justify-items:center ;
     text-align: center;
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
     height: 43rem;
 }
 .game{
@@ -20,7 +21,8 @@ html{
     height: 32rem;
     width: 32rem;
     gap: 1rem;
-    background-color: #ffffff;
+    background-color: transparent;
+    border-radius: 16px;
 }
 .box{
     background-color: rgb(0, 0, 0);
@@ -30,11 +32,12 @@ html{
     text-align: center;
     border: none;
     font-size: 5rem;
+    border-radius: 16px;
 }
 .name{
     margin-top: 3rem;
     margin-bottom: 4rem ;
-    color: #cad7ff;
+    color: #000000;
     font-size: 4rem;
 }
 #x{
@@ -57,6 +60,7 @@ html{
     color: #fff5f5;
     font-size: 3rem;
     font-weight: bold;
+    border-radius: 8px;
 }
 
 .x{
