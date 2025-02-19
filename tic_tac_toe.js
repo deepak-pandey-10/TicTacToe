@@ -1,4 +1,6 @@
 let boxes = document.querySelectorAll(".box")
+let playerxscore = document.querySelector(".xscore")
+let playeroscore = document.querySelector(".oscore")
 
 let playerx = 0
 let playero = 0
@@ -35,6 +37,7 @@ boxes.forEach((box)=>{
 
 })
 
+
 const checkwinner = ()=>{
     for (let pattern of winpatterns){
         let pos1 = boxes[pattern[0]].innerText
@@ -46,11 +49,50 @@ const checkwinner = ()=>{
                 console.log("winner")
                 if (pos1==="X"){
                     playerx+=1
+                    playerxscore.innerText = playerx
+                    
+
+
                 }
                 if (pos1==="O"){
                     playero+=1
+                    playeroscore.innerText = playero
                 }
+                boxes.forEach(box => box.disabled = true);
+
+                boxes.forEach((box, index) => {
+                    if (!pattern.includes(index)) {
+                        box.innerText = "";
+                    }
+                
+
+
             }
-        }
+        )}
     }
 }
+}
+
+let newgamefn = ()=>{
+    boxes.forEach((box)=>{
+        box.innerText = ""
+        box.disabled = false
+    })
+}
+
+let newgame = document.querySelector(".new")
+
+newgame.addEventListener("click" , newgamefn)
+
+let resetfn = ()=>{
+    boxes.forEach((box)=>{
+        box.innerText = ""
+        box.disabled = false
+    })
+    playerxscore.innerText = "0"
+    playeroscore.innerText = "0"
+}
+
+let reset = document.querySelector(".reset")
+
+reset.addEventListener("click" , resetfn)
