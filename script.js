@@ -29,7 +29,7 @@ boxes.forEach((box)=>{
             box.innerText = "X"
             box.id = "x"
             turnX = !turnX
-            document.body.style.background='linear-gradient(to left, rgba(0, 0, 255, 1), rgba(0, 0, 0, 0))'
+            document.body.style.background='linear-gradient(to left, rgba(0, 0, 255, 1), rgba(25, 25, 25, 1))'
             so.style.color = "black"
             po.style.color = "black"
             sx.style.color = "red"
@@ -40,7 +40,7 @@ boxes.forEach((box)=>{
             box.innerText = "O"
             box.id = "o"
             turnX = !turnX
-            document.body.style.background='linear-gradient(to right, rgba(224, 37, 37, 1), rgba(0, 0, 0, 0))'
+            document.body.style.background='linear-gradient(to left, rgba(255, 0, 0, 1), rgba(25, 25, 25, 1))'
             sx.style.color = "black"
             px.style.color = "black"
             so.style.color = "blue"
@@ -66,7 +66,7 @@ const checkwinner = ()=>{
                 if (pos1==="X"){
                     playerx+=1
                     playerxscore.innerText = playerx
-                    document.body.style.background='linear-gradient(to right, rgba(224, 37, 37, 1), rgba(0, 0, 0, 0))'
+                    document.body.style.background='linear-gradient(to left, rgba(255, 0, 0, 1), rgba(25, 25, 25, 1))'
                     sx.style.color = "black"
                     px.style.color = "black"
                     so.style.color = "blue"
@@ -78,7 +78,7 @@ const checkwinner = ()=>{
                 if (pos1==="O"){
                     playero+=1
                     playeroscore.innerText = playero
-                    document.body.style.background='linear-gradient(to left, rgba(0, 0, 255, 1), rgba(0, 0, 0, 0))'
+                    document.body.style.background='linear-gradient(to left, rgba(0, 0, 255, 1), rgba(25, 25, 25, 1))'
                     so.style.color = "black"
                     po.style.color = "black"
                     sx.style.color = "red"
@@ -104,7 +104,7 @@ let newgamefn = ()=>{
         box.innerText = ""
         box.disabled = false
     })
-    document.body.style.background="rgb(238, 233, 233)"
+    document.body.style.background="black"
     so.style.color = "blue"
     po.style.color = "blue"
     sx.style.color = "red"
@@ -123,7 +123,7 @@ let resetfn = ()=>{
     })
     playerxscore.innerText = "0"
     playeroscore.innerText = "0"
-    document.body.style.background="rgb(238, 233, 233)"
+    document.body.style.background="black"
     so.style.color = "blue"
     po.style.color = "blue"
     sx.style.color = "red"
